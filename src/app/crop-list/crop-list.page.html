@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title><b>पिके</b></ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <ion-grid >
+      <ion-row *ngIf="flag==false " >
+        <ion-col *ngFor="let crop of crops;let i=index;" size-md="6" size-xs="12" >
+          <ion-card class="speaker-card">
+            <ion-item>
+              <ion-card-title><b>{{crop.name}}</b></ion-card-title>
+            </ion-item>
+
+            <ion-card-header>
+              <ion-item detail="false" lines="none"  (click)="show(crop)" class="speaker-item" >
+                <div align ="center">
+                  <img [src]="crop.imagePath" height="150px" width="300px" >
+                </div>
+              </ion-item>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size-md="12"  *ngIf="flag==true">
+            <ion-card class="speaker-card" >
+              <ion-item>
+                <ion-card-title>{{a.name}}</ion-card-title>
+              </ion-item>
+
+              <ion-card-header>
+                <ion-item detail="false" lines="none" class="speaker-item" >
+                  <div align ="center">
+                    <img [src]="a.imagePath" alt="" height="150px" >
+                  </div>
+                </ion-item>
+              </ion-card-header>
+              <ion-card-content>
+                <p style="text-align:justify;"><b>पिकाची माहिती :</b>{{a.info}}</p><br>
+                <p style="text-align:justify;"><b>जमिनीचा प्रकार :</b>{{a.land}}</p><br>
+                <p style="text-align:justify;"><b>हवामान :</b>{{a.climate}}</p><br>
+                <p style="text-align:justify;"><b>पिकाची जात :</b>{{a.cropType}}</p><br>
+                <p style="text-align:justify;"><b>लागवड :</b>{{a.farming}}</p><br>
+                <p style="text-align:justify;"><b>खत व्यवस्थापन :</b>{{a.fert}}</p><br>
+                <p style="text-align:justify;"><b>पाणी व्यवस्थापन :</b>{{a.water}}</p><br>
+                <p style="text-align:justify;"><b>रोग नियंत्रण :</b>{{a.dieases}}</p><br>
+                <p style="text-align:justify;"><b>उत्पादन :</b>{{a.production}}</p><br>
+                <p style="text-align: center;"><ion-button align="center"(click)="clear()"> पिके</ion-button></p>
+              </ion-card-content>
+
+            </ion-card>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,230 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title><b>नोंदणी</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div size="4">
+  <div class="signup-logo">
+    <img src="assets/img/about/surachita.jpeg" alt="Ionic Logo">
+  </div>
+      <div align="center">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSftm8VFH0Yzhhma5nvnVwKYmiBmvkhHEOVfJEFyzFyBbjIjrQ/viewform?embedded=true" width="100%" height="900px" frameborder="0" marginheight="0" marginwidth="0">Loading…
+        </iframe>
+      </div>
+
+
+
+    <!-- <form (ngSubmit)="signupForm.form.valid && onSignup(signupForm)" #signupForm="ngForm" novalidate>
+      <ion-list lines="none">
+        <ion-item>
+          <ion-label  class="label"position="floating" color="primary"> <ion-icon name="person-circle-outline"></ion-icon> नाव:</ion-label>
+          <ion-input [(ngModel)]="user.name" name="name" type="text" #name="ngModel" placeholder=" कृपया येथे नाव टाका"
+            [ngClass]="{'is-invalid':signupForm.submitted && name.invalid}" pattern="[a-zA-Z\s]+" minlength="3" required>
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="label" position="stacked" color="primary"><ion-icon name="ellipse"></ion-icon>जन्मतारीख:</ion-label>
+          <ion-datetime displayformat="DD/MM/YYYY" placeholder="कृपया जन्मतारीख  निवडा"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="label" position="stacked" color="primary"><ion-icon name="list-circle-sharp"></ion-icon> पत्ता: </ion-label>
+          <ion-input   placeholder="कृपया येथे पत्ता टाका" pattern="[a-zA-Z\s]+" type="text" required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label class="label" position="stacked" color="primary"><ion-icon name="call"></ion-icon> मोबाईल नंबर :</ion-label>
+          <ion-input placeholder="कृपया येथे मोबाईल नंबर टाका"[(ngModel)]="user.phonenumber" name="phonenumber" type="number" #phonenumber="ngModel"
+            pattern='[0-9]{10}' required>
+          </ion-input>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-label  class="label1" color="primary">लिंग:</ion-label>
+          <ion-select placeholder="Select gender" [(ngModel)]="user.gender" #gender="ngModel" name=gender required>
+            <ion-select-option value="Female"  >महिला </ion-select-option>
+            <ion-select-option value="Male"  >पुरुष </ion-select-option>
+            <ion-select-option value="Other">अन्य </ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-card>
+
+      </ion-card>
+      <ion-card-header color="blue" (click)="f=!f"><p style="color:red;"><b><i>तुमची पिके निवडा :</i></b></p></ion-card-header>
+      <ion-card-content *ngIf="f==true"><ion-item>
+        <ion-label>द्राक्षे</ion-label>
+        <ion-checkbox (click)="flag1=!flag1"></ion-checkbox><br>
+      </ion-item>
+      <ion-item  *ngIf="flag1==true" color="tertiary">
+        <ion-label>एकूण  क्षेत्र:</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>छाटणी/पेरणी दिनांक:</ion-label>
+      <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>डाळिंब</ion-label>
+        <ion-checkbox (click)="flag2=!flag2"></ion-checkbox>
+      </ion-item>
+      <ion-item  *ngIf="flag2==true" color="tertiary">
+        <ion-label>एकूण  क्षेत्र:</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>छाटणी/पेरणी दिनांक:</ion-label>
+      <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>बोर</ion-label>
+        <ion-checkbox (click)="flag3=!flag3"></ion-checkbox>
+      </ion-item>
+      <ion-item  *ngIf="flag3==true" color="tertiary">
+        <ion-label>एकूण  क्षेत्र:</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>छाटणी/पेरणी दिनांक:</ion-label>
+      <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>केळी</ion-label>
+        <ion-checkbox (click)="flag4=!flag4"></ion-checkbox>
+      </ion-item>
+      <ion-item  *ngIf="flag4==true" color="tertiary">
+        <ion-label>एकूण  क्षेत्र:</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>छाटणी/पेरणी दिनांक:</ion-label>
+      <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>भूईमूग</ion-label>
+        <ion-checkbox (click)="flag5=!flag5"></ion-checkbox>
+      </ion-item>
+      <ion-item  *ngIf="flag5==true" color="tertiary">
+        <ion-label>एकूण  क्षेत्र:</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>छाटणी/पेरणी दिनांक:</ion-label>
+      <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>मका</ion-label>
+        <ion-checkbox (click)="flag6=!flag6"></ion-checkbox>
+      </ion-item>
+      <ion-item  *ngIf="flag6==true" color="tertiary">
+        <ion-label>एकूण  क्षेत्र:</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>छाटणी/पेरणी दिनांक:</ion-label>
+      <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>ज्वारी</ion-label>
+        <ion-checkbox (click)="flag7=!flag7"></ion-checkbox>
+      </ion-item>
+      <ion-item  *ngIf="flag7==true" color="tertiary">
+        <ion-label>एकूण  क्षेत्र:</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>छाटणी/पेरणी दिनांक:</ion-label>
+      <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>मिरची</ion-label>
+        <ion-checkbox (click)="flag8=!flag8"></ion-checkbox>
+      </ion-item>
+      <ion-item  *ngIf="flag8==true" color="tertiary">
+        <ion-label>एकूण  क्षेत्र:</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>छाटणी/पेरणी दिनांक:</ion-label>
+      <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>गहू</ion-label>
+        <ion-checkbox (click)="flag9=!flag9"></ion-checkbox>
+      </ion-item>
+      <ion-item  *ngIf="flag9==true" color="tertiary">
+        <ion-label>एकूण  क्षेत्र:</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>छाटणी/पेरणी दिनांक:</ion-label>
+      <ion-input type="text"></ion-input>
+      </ion-item>
+
+    <ion-item (click)="flag10=!flag10">
+      <ion-label>इतर:</ion-label><br>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+      <ion-item *ngIf="flag10==true" color="tertiary">
+      <ion-input type="text"></ion-input>
+      <ion-label>एकूण  क्षेत्र:</ion-label>
+      <ion-input type="text"></ion-input>
+      <ion-label>छाटणी/पेरणी दिनांक:</ion-label>
+      <ion-input type="text"></ion-input>
+      </ion-item>
+</ion-card-content> -->
+
+
+      <!-- <ion-item>
+        <ion-label color="primary">Member Count</ion-label>
+        <select [(ngModel)]="user.members_count" (click)="change($event)" name="count">
+          <option  [ngValue]="0" >Not have any Members</option>
+          <option  [ngValue]="1" >1 Member</option>
+          <option  [ngValue]="2" >2 Members</option>
+          <option  [ngValue]="3" >3 Members</option>
+          <option  [ngValue]="4" >4 Members</option>
+          <option  [ngValue]="5" >5 Members</option>
+          <option  [ngValue]="6" >6 Members</option>
+        </select>
+      </ion-item>
+
+    <ion-list *ngFor="let m of members; let i=index">
+      <ion-label color="primary" align="center">Member {{i+1}} Details:</ion-label>
+      <ion-item>
+        <ion-label position="stacked" color="primary">Name</ion-label>
+        <ion-input [(ngModel)]="m.name" type="text" name="mname{{i+1}}" #mname="ngModel"
+          [ngClass]="{'is-invalid':signupForm.submitted && name.invalid}" pattern="[a-zA-Z\s]+" minlength="1" required>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="mname.valid || submitted == true" class="ion-padding-start">
+           member name is required
+        </p>
+      </ion-text>
+      <ion-item>
+        <ion-label position="stacked" color="primary">Age</ion-label>
+        <ion-input [(ngModel)]="m.age" type="number" name="mage{{i+1}}" #mage="ngModel"
+          pattern='^(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|200)$' required>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="mage.valid || submitted == true" class="ion-padding-start">
+          Age is required and between 1-99
+        </p>
+      </ion-text>
+      <ion-item>
+        <ion-label color="primary">Gender</ion-label>
+        <ion-select placeholder="Select gender" [(ngModel)]="m.gender" name="{{i+1}}" #mgender="ngModel" required>
+          <ion-select-option value="Female"  >Female</ion-select-option>
+          <ion-select-option value="Male"  >Male</ion-select-option>
+          <ion-select-option value="Other">other</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="mgender.valid || submitted == true" class="ion-padding-start">
+          Please select one gender
+        </p>
+      </ion-text> -->
+    <!-- </ion-list> -->
+
+<!--
+      <div class="ion-padding">
+        <ion-button type="submit" expand="block">Create</ion-button>
+      </div>
+    </form> -->
+    <div class="ion-text-center">
+      <a routerLink="/crop-list">
+        <p>Already register???</p>
+      </a>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title><b>संचालक मंडळ</b> </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+  <ion-content fullscreen="true">
+    <!-- <ion-grid fixed>
+      <ion-row *ngFor="let m of members;let i=index;">
+        <ion-col md-size="6" size="10"*ngIf="flag==false"  >
+          <ion-card class="speaker-card">
+            <ion-card-header (click)="show(m)">
+              <ion-item detail="false" lines="none" class="speaker-item" >
+                <ion-avatar slot="start">
+                  <ion-icon name="person-outline"></ion-icon>
+                </ion-avatar>
+                <ion-label color="dark">
+                  <p><i><b>{{m.name}}</b></i></p>
+                  {{m.position}}
+                </ion-label>
+              </ion-item>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+        <ion-col >
+          <ion-card class="speaker-card" *ngIf="flag==true && i==0" (click)="clear()">
+            <ion-card-header >
+
+                <ion-label color="primary">
+                  <p><i><b>{{x.name}}</b></i></p>
+                </ion-label>
+            </ion-card-header>
+            <ion-card-content>
+              <p>{{x.age}}</p>
+              <p>{{x.phone}}</p>
+              <p>{{x.position}}</p>
+              <div align ="center">
+                <img [src]="x.image"  width ="150px" height="150px" >
+              </div> -->
+            <!-- </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>  -->
+
+    <!-- <div align="center">
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKa0ZVAuYzeASCqrzFokAGy1mTIJxjhzi_sCjww1Y5tFhJAC9DwO6tXN2IXUbVgQ/pubhtml?gid=1578601038&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="900px" frameborder="0" marginheight="0" marginwidth="1"></iframe>
+    </div> -->
+
+    <ion-slides  pager #Slider class="slides" (ionSlidesDidLoad)="afterslidesLoad(Slider)">
+      <ion-slide *ngFor="let m of members;">
+        <ion-card class="speaker-card" size="10">
+          <ion-card-header >
+
+              <ion-label color="primary">
+                <p><i><b>{{m.name}}</b></i></p>
+              </ion-label>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{m.age}}</p>
+            <p>{{m.phone}}</p>
+            <p>{{m.position}}</p>
+            <!-- <div align ="center">
+              <img [src]="m.image"  width ="15px" height="15px" >
+            </div> -->
+          </ion-card-content>
+        </ion-card>
+
+      </ion-slide>
+    </ion-slides>
+
+  </ion-content>
